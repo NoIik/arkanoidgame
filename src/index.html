@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/index.css">
+        <meta charset="UTF-8">
+        <title>Simple game </title>
+    </head>
+    <body>
+        <div>
+            <div class="detail" >
+                <div id="timer">00:00</div>
+                <div id="score">0</div>
+                <div id="lives">3</div>
+            </div>
+            <div class="screen" id="screen">
+                <div class="ball" id="ball"></div>
+                <div class="stick" id="stick" ></div>
+                <div class="initialPage" id='initialPage'>
+                    <button onclick=startGame()>Start</button>
+                    <table></table>
+                </div>
+                <div class="paused" id="paused">
+                    <button onclick=continueGame() ><img src="/assets/play.png" class="icon"></button>
+                    <button onclick=resetGame() >Home</button>
+                </div>
+                <div class="overly" id="over">1</div>
+                <div  id="form">
+                    <h1>GAME OVER</h1>
+                    <form method="GET" action="/save/score">
+                        <p id="score-rep">Your score is</p>
+                        <input name="scoreHolder" class="scoreHolder" hidden>
+                        <label for="name">
+                            Nickname
+                        </label>
+                        <input placeholder="Write your name" name="name" id="name">
+                        <button>Send</button>
+                    </form>
+                    <table>
+                        
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+    </body>
+
+    <script type="module" src="./js/index.js">
+    </script>
+</html>
